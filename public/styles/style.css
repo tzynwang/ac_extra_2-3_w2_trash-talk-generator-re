@@ -1,0 +1,13 @@
+label {
+  height: 40vh;
+}
+
+label div {
+  height: 100%;
+}
+
+label img {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+}

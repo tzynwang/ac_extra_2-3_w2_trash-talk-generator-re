@@ -1,0 +1,44 @@
+<h1 class="my-3 text-center">你想對誰說幹話？</h1>
+<div class="container my-3">
+  <form action="/generate" method="POST">
+    <div class="row row-cols-1 row-cols-md-3 g-3 mb-3">
+      <div class="col d-flex flex-column align-items-center justify-content-between">
+        <label class="form-check-label d-flex flex-column align-items-center" for="engineer">
+          <div class="d-flex flex-column align-items-center">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg">
+            <span>工程師</span>
+          </div>
+        </label>
+        <input class="form-check-input" type="radio" name="title" id="engineer" value="engineer" required {{ifEquals selectedTitle 'engineer'}}>
+      </div>
+      <div class="col d-flex flex-column align-items-center justify-content-between">
+        <label class="form-check-label d-flex flex-column align-items-center" for="designer">
+          <div class="d-flex flex-column align-items-center">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg">
+            <span>設計師</span>
+          </div>
+        </label>
+        <input class="form-check-input" type="radio" name="title" id="designer" value="designer"
+        {{ifEquals selectedTitle 'designer'}}>
+      </div>
+      <div class="col d-flex flex-column align-items-center justify-content-between">
+        <label class="form-check-label d-flex flex-column align-items-center" for="entrepreneur">
+          <div class="d-flex flex-column align-items-center">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg">
+            <span>創業家</span>
+          </div>
+        </label>
+        <input class="form-check-input" type="radio" name="title" id="entrepreneur" value="entrepreneur" {{ifEquals selectedTitle 'entrepreneur'}}>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-12 d-grid">
+        <button class="btn btn-primary" type="submit">產生幹話</button>
+      </div>
+      <div class="col-12 input-group">
+        <input class="form-control" type="text" value="{{ sentence }}" id="sentence"></input>
+        <button class="btn btn-secondary" type="button" id="copyButton">複製幹話</button>
+      </div>
+    </div>
+  </form>
+</div>
